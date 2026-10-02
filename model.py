@@ -88,8 +88,14 @@ def init_mlp_params(key, layer_sizes, scale=0.1):
 
     return params
 
-# Step 9 - linear_forward (not yet solved)
-# TODO: implement
+# Step 9 - linear_forward
+import jax.numpy as jnp
+def linear_forward(x, layer_params):
+    # TODO: compute x @ W + b using layer_params['W'] and layer_params['b'].
+    W = layer_params["W"]
+    b = layer_params["b"]
+
+    return jnp.dot(x, W) + b
 
 # Step 10 - relu_activation (not yet solved)
 # TODO: implement
